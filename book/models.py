@@ -14,5 +14,5 @@ class Person(models.Model):
         return self.name_surname
     
     def get_absolute_url(self):
-        return reverse('person_detail', args=[str(self.id)])
+        return reverse('detail', args=[str(self.id)])
     
