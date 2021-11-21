@@ -2,7 +2,7 @@
 {% block content %}
     {% for post in object_list %}
         <div class="post-entry">
-            <h2><a href="">{{ post.name_surname }}</a></h2>
+            <h2><a href="{% url 'person_detail' post.pk %}">{{ post.name_surname }}</a></h2>
             <p>{{ post.adress }}</p>
             <p>{{ post.phone }}</p>
         </div>
