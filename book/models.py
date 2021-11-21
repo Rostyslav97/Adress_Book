@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Person(models.Model):
     name_surname = models.CharField(max_length=200)
@@ -11,3 +12,6 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name_surname
+    
+    def get_absolute_url(self):
+        return reverse('person_detail', args=[str(self.id)])

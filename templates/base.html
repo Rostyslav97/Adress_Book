@@ -4,10 +4,15 @@
         <title>Adress Book</title>
     </head>
     <body>
-        <header>
-            <h1><a href="{% url 'home' %}">Adress Book</a></h1>
-        </header>
         <div>
+            <header>
+                <div class="nav-left">
+                    <h1><a href="{% url 'home' %}">Adress Book</a></h1>
+                </div>
+                <div class="nav-right">
+                    <a href="{% url 'person_new' %}">+ New Person</a>
+                </div>
+            </header>
             {% block content %}
             {% endblock content %}
         </div>
