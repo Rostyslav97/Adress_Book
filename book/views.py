@@ -11,6 +11,6 @@ class PersonDetailView(DetailView):
     template_name = 'person_detail.html'
 
 class PersonCreateView(CreateView):
-    model = Person
+    model=Person
     template_name = 'person_new.html'
     fields = ['name_surname', 'adress', 'phone']
